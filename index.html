@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>contributors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A list of contributors."/>
+
+    <link rel="icon" type="image/png" href="DEV.png"/>
+    <link rel="stylesheet" href="style.css" />
+    <script src="contributors.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const START = 1602226800000;
+        const END = 1602313200000;
+        let now = new Date().getTime();
+
+        if (now >= START && now <= END) {
+          document.getElementById("producthunt").classList.remove("hidden");
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h3 class="subtitle has-text-centered is-2" style="margin-left: 16px">
+        List of contributors
+      </h3>
+      <div style="display: flex; align-items: center; justify-content: center">
+        <table class="table is-hoverable contributor-table">
+          <thead>
+            <td>Avatar</td>
+            <td>Github</td>
+            <td>Role</td>
+            <td>Contributions</td>
+          </thead>
+          <tbody id="contributors">
+            <tr>
+                <!-- Pin A Person -->
+                <!-- Avatar -->       <td><img src="https://avatars1.githubusercontent.com/u/24563424?s=460&u=f999d6ab53d95e09c928b489b7251d00bbbbe4dc&v=4" class="contributor-image" alt="Author avatar" /></td>
+                <!-- Account -->      <td><a class="link" href="https://github.com/bishalsaha" target="_blank" rel="nofollow">@bishalsaha</td>
+                <!-- Role -->         <td>None</a></td>
+                <!-- Contributions --><td id="pin-contributions">None</td> 
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
